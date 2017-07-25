@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<smrtpipeSettings>
+  <module label="Reads Of Insert" id="P_CCS" editableInJob="true" >
+    <description>Generates consensus sequences from single molecules.</description>
+    <param name='minFullPasses' label="Minimum Full Passes">
+      <title>The minimum number of full-length passes over the insert DNA for the read to be included.</title>
+      <value>1</value>  
+      <input type="text"/>
+      <rule type="digits" min="0" message="Value must be greater than or equal to 0" />
+    </param>
+    <param name='minPredictedAccuracy' label="Minimum Predicted Accuracy">
+      <title>The minimum predicted accuracy (in %) of the Reads of Insert emitted.</title>
+      <value>90</value>
+      <input type="text"/>
+      <rule type="number" min="0" max="100" message="Value must be between 0 and 100" />
+    </param>
+    <param name='minLength' label="Minimum Read Length of Insert (in bases)">
+      <title>The Minimum Read Length of Insert (in bases). Default: No Minimum Length
+      </title>
+	  <value>500</value>
+      <input type="text"/>
+      <rule type="digits" min="1" message="Value must be greater than 0" />
+    </param>
+    <param name='maxLength' label="Maximum Read Length of Insert (in bases)">
+      <title>The Maximum Read Length of Insert (in bases). Default: No Limit</title>
+	  <value>10000</value>
+      <input type="text"/>
+      <rule type="digits" min="1" message="Value must be greater than 0" />
+    </param>
+  </module>
+</smrtpipeSettings>
